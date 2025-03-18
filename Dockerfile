@@ -9,6 +9,7 @@ WORKDIR /application
 # Copy application files and ensure correct permissions
 COPY . /application
 RUN chmod -R 755 /application
+ENV PATH="/home/user/.local/bin:$PATH"
 
 # Switch to non-root user
 USER user
